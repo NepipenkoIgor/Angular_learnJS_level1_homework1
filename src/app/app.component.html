@@ -2,12 +2,11 @@
 
 <div class="element">
   <div class="element-left">
-    <app-wallpaper></app-wallpaper>
-    <app-list></app-list>
+    <app-list #selected="recreationsList"></app-list>
   </div>
   <div class="element-right">
-    <app-weather></app-weather>
-    <app-social-info></app-social-info>
+    <app-weather [selectedRecreation]="selected.getSelectedRecreation()"></app-weather>
+    <app-social-info [selectedRecreation]="selected.getSelectedRecreation()"></app-social-info>
 
   </div>
   <div class="clear"> </div>

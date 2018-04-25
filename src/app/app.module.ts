@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
-import { WallpaperComponent } from './wallpaper/wallpaper.component';
 import { SocialInfoComponent } from './social-info/social-info.component';
 import { WeatherComponent } from './weather/weather.component';
+import { RecreationComponent } from './list/recreation/recreation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    WallpaperComponent,
     SocialInfoComponent,
-    WeatherComponent
+    WeatherComponent,
+    RecreationComponent
   ],
   imports: [
     BrowserModule
