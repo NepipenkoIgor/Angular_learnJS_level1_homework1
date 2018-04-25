@@ -6,6 +6,7 @@ import { ListComponent } from './list/list.component';
 import { SocialInfoComponent } from './social-info/social-info.component';
 import { WeatherComponent } from './weather/weather.component';
 import { RecreationComponent } from './list/recreation/recreation.component';
+import { RecreationsFilterPipe } from './common/pipe/recreations-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { RecreationComponent } from './list/recreation/recreation.component';
     ListComponent,
     SocialInfoComponent,
     WeatherComponent,
-    RecreationComponent
+    RecreationComponent,
+    RecreationsFilterPipe
   ],
   imports: [
     BrowserModule

@@ -21,7 +21,7 @@ const data: Recreation[] = [{
     followers: 12,
     following: 56
   },
-  type: 'hotel'
+  type: ['hotel', 'fishing', 'tours', 'health']
 },
   {
     img1: '../assets/images/r1.jpg',
@@ -42,7 +42,91 @@ const data: Recreation[] = [{
       followers: 142,
       following: 564
     },
-    type: 'fishing'
+    type: ['hotel', 'fishing', 'tours']
+  },
+  {
+    img1: '../assets/images/r1.jpg',
+    img2: '../assets/images/res.jpg',
+    address: 'asdfasd4f',
+    main_decription: 'string2',
+    additional_decription: 'string2',
+    phone: 234243,   // дополнительно задание pipe для форматирования
+    weather: {
+      title: 'title',
+      icon: 'icon',
+      water: 12,
+      temperature: 32
+    },
+    social_info: {
+      title: 'v4k',
+      img: 'sr4c',
+      followers: 142,
+      following: 564
+    },
+    type: ['hotel', 'fishing', 'tours', 'health']
+  },
+  {
+    img1: '../assets/images/r1.jpg',
+    img2: '../assets/images/res.jpg',
+    address: 'asdfasd4f',
+    main_decription: 'string2',
+    additional_decription: 'string2',
+    phone: 234243,   // дополнительно задание pipe для форматирования
+    weather: {
+      title: 'title',
+      icon: 'icon',
+      water: 12,
+      temperature: 32
+    },
+    social_info: {
+      title: 'v4k',
+      img: 'sr4c',
+      followers: 142,
+      following: 564
+    },
+    type: ['fishing', 'tours']
+  },
+  {
+    img1: '../assets/images/r1.jpg',
+    img2: '../assets/images/res.jpg',
+    address: 'asdfasd4f',
+    main_decription: 'string2',
+    additional_decription: 'string2',
+    phone: 234243,   // дополнительно задание pipe для форматирования
+    weather: {
+      title: 'title',
+      icon: 'icon',
+      water: 12,
+      temperature: 32
+    },
+    social_info: {
+      title: 'v4k',
+      img: 'sr4c',
+      followers: 142,
+      following: 564
+    },
+    type: ['hotel', 'fishing']
+  },
+  {
+    img1: '../assets/images/r1.jpg',
+    img2: '../assets/images/res.jpg',
+    address: 'asdfasd4f',
+    main_decription: 'string2',
+    additional_decription: 'string2',
+    phone: 234243,   // дополнительно задание pipe для форматирования
+    weather: {
+      title: 'title',
+      icon: 'icon',
+      water: 12,
+      temperature: 32
+    },
+    social_info: {
+      title: 'v4k',
+      img: 'sr4c',
+      followers: 142,
+      following: 564
+    },
+    type: ['hotel', 'tours']
   }
 ];
 

@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {recreation$} from '../data/index';
-import {Observable} from 'rxjs/Observable';
+import { Component } from '@angular/core';
+import { recreation$ } from '../data/index';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-list',
@@ -12,10 +12,10 @@ import {Observable} from 'rxjs/Observable';
 export class ListComponent {
 
   public recreations$: Observable<Recreation[]> = recreation$;
-  private selectedRecreation: Recreation;
   public filterList: string[] = [];
+  private selectedRecreation: Recreation;
 
-  constructor() {
+  public constructor() {
   }
 
   public getSelectedRecreation(): Recreation {
@@ -25,8 +25,7 @@ export class ListComponent {
   public toggleFilter(filterName: string): void {
     if (this.filterList.includes(filterName)) {
       this.filterList.splice(this.filterList.indexOf(filterName), 1)
-    }
-    else {
+    } else {
       this.filterList.push(filterName);
     }
   }
@@ -38,7 +37,7 @@ export class ListComponent {
     this.setSelectedRecreation = recreation;
   }
 
-  set setSelectedRecreation(recreation: Recreation) {
+  public set setSelectedRecreation(recreation: Recreation) {
     this.selectedRecreation = recreation;
   }
 }

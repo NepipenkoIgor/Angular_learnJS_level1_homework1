@@ -20,5 +20,5 @@ type Recreation = {
     followers: number,
     following: number
   },
-  type: string
+  type: string[]
 };
