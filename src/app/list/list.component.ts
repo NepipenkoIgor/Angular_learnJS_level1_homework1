@@ -13,6 +13,7 @@ export class ListComponent {
 
   public recreations$: Observable<Recreation[]> = recreation$;
   public filterList: string[] = [];
+  public applyFilterIndicator: boolean = false;
   private selectedRecreation: Recreation;
 
   public constructor() {
@@ -24,18 +25,18 @@ export class ListComponent {
 
   public toggleFilter(filterName: string): void {
     if (this.filterList.includes(filterName)) {
-      this.filterList.splice(this.filterList.indexOf(filterName), 1)
+      this.filterList.splice(this.filterList.indexOf(filterName), 1);
     } else {
       this.filterList.push(filterName);
     }
+
+    this.applyFilterIndicator = !this.applyFilterIndicator;// special, because angular dont' check changes in array
   }
 
   public isFilterSelected(filterName: string): boolean {
     return this.filterList.includes(filterName);
   }
-  public setR(recreation: Recreation): void {
-    this.setSelectedRecreation = recreation;
-  }
+
 
   public set setSelectedRecreation(recreation: Recreation) {
     this.selectedRecreation = recreation;

@@ -1,13 +1,22 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   name: 'recreationsFilter'
 })
 export class RecreationsFilterPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    console.log(args);
-    return value;
+  public transform(value: Recreation[], args: string[], additionIndicator?: boolean): Recreation [] {
+
+    if (value) {
+      return value.filter((recreation: Recreation) => {
+        return args.every((arg: string) => {
+          return recreation.type.includes(arg);
+        });
+      });
+
+    } else {
+      return [];
+    }
   }
 
 }
