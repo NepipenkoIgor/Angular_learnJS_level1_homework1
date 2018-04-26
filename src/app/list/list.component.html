@@ -1,4 +1,10 @@
-<div class="element-bg-img"><img src="{{getSelectedRecreation()?.img1}}" alt="" class="img-responsive">
+<div class="element-bg-img">
+  <img *ngIf="getSelectedRecreation(); else wallpaper" src="{{getSelectedRecreation().img1}}" alt="" class="img-responsive">
+
+  <ng-template #wallpaper>
+      <img src="../assets/images/default.jpg" alt="">
+  </ng-template>
+
 </div>
 <div class="element-left-bottom">
   <div class="ele-strip">
@@ -8,6 +14,7 @@
       <li><a (click)="toggleFilter('tours')" [class.selected]="isFilterSelected('tours')">Tours</a></li>
       <li class="anc-bor"><a (click)="toggleFilter('health')" [class.selected]="isFilterSelected('health')">Health</a>
       </li>
+
     </ul>
   </div>
   <div class="village">
