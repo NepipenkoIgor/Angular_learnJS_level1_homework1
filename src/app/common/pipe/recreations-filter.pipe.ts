@@ -6,7 +6,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 export class RecreationsFilterPipe implements PipeTransform {
 
   public transform(value: Recreation[], args: string[], additionIndicator?: boolean): Recreation [] {
-
+    additionIndicator = !additionIndicator;
     if (value) {
       return value.filter((recreation: Recreation) => {
         return args.every((arg: string) => {
