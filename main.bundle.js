@@ -310,7 +310,7 @@ module.exports = ""
 /***/ "./src/app/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"element-bg-img\">\n  <img *ngIf=\"getSelectedRecreation(); else wallpaper\" src=\"{{getSelectedRecreation().img1}}\" alt=\"\" class=\"img-responsive\">\n\n  <ng-template #wallpaper>\n      <img src=\"../assets/images/default.jpg\" alt=\"\">\n  </ng-template>\n\n</div>\n<div class=\"element-left-bottom\">\n  <div class=\"ele-strip\">\n    <ul>\n      <li><a (click)=\"toggleFilter('hotel')\" [class.selected]=\"isFilterSelected('hotel')\">Hotel</a></li>\n      <li><a (click)=\"toggleFilter('fishing')\" [class.selected]=\"isFilterSelected('fishing')\">Fishing</a></li>\n      <li><a (click)=\"toggleFilter('tours')\" [class.selected]=\"isFilterSelected('tours')\">Tours</a></li>\n      <li class=\"anc-bor\"><a (click)=\"toggleFilter('health')\" [class.selected]=\"isFilterSelected('health')\">Health</a>\n      </li>\n\n    </ul>\n  </div>\n  <div class=\"village\">\n    <h3>Righteous indignation & like</h3>\n    <span class=\"line\"> </span>\n    <div class=\"activity_box\">\n      <div class=\"scrollbar\" id=\"style-2\" *ngIf=\"recreations$ | async | recreationsFilter:filterList:applyFilterIndicator as recreations\">\n        <div *ngFor=\"let recreation of recreations\">\n          <app-recreation [recreation]=recreation (emitSelectedRecreation)=\"setSelectedRecreation =$event\"></app-recreation>\n        </div>\n\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"element-bg-img\">\r\n  <img *ngIf=\"getSelectedRecreation(); else wallpaper\" src=\"{{getSelectedRecreation().img1}}\" alt=\"\" class=\"img-responsive\">\r\n\r\n  <ng-template #wallpaper>\r\n      <img src=\"../assets/images/default.jpg\" alt=\"\">\r\n  </ng-template>\r\n\r\n</div>\r\n<div class=\"element-left-bottom\">\r\n  <div class=\"ele-strip\">\r\n    <ul>\r\n      <li><a (click)=\"toggleFilter('hotel')\" [class.selected]=\"isFilterSelected('hotel')\">Hotel</a></li>\r\n      <li><a (click)=\"toggleFilter('fishing')\" [class.selected]=\"isFilterSelected('fishing')\">Fishing</a></li>\r\n      <li><a (click)=\"toggleFilter('tours')\" [class.selected]=\"isFilterSelected('tours')\">Tours</a></li>\r\n      <li class=\"anc-bor\"><a (click)=\"toggleFilter('health')\" [class.selected]=\"isFilterSelected('health')\">Health</a>\r\n      </li>\r\n\r\n    </ul>\r\n  </div>\r\n  <div class=\"village\">\r\n    <h3>Righteous indignation & like</h3>\r\n    <span class=\"line\"> </span>\r\n    <div class=\"activity_box\">\r\n      <div class=\"scrollbar\" id=\"style-2\" *ngIf=\"recreations$ | async | recreationsFilter:filterList:applyFilterIndicator as recreations\">\r\n        <div *ngFor=\"let recreation of recreations\">\r\n          <app-recreation [recreation]=recreation (emitSelectedRecreation)=\"setSelectedRecreation =$event\"></app-recreation>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -386,7 +386,7 @@ module.exports = ""
 /***/ "./src/app/list/recreation/recreation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"activity-row\" (click)=\"selectThisRecreation()\">\n  <div class=\"activity-desc\">\n    <h5>{{recreation.address}}</h5>\n    <p>{{recreation.main_decription}}</p>\n    <p>{{recreation.additional_decription}}</p>\n    <h6>{{recreation.phone}}</h6>\n  </div>\n  <div class=\"activity-img\">\n    <ul>\n      <li><img src='{{recreation.img1}}'  alt=\"\"/></li>\n      <li><img src='{{recreation.img2}}'  alt=\"\"/></li>\n    </ul>\n  </div>\n  <div class=\"clear\"> </div>\n</div>\n"
+module.exports = "<div class=\"activity-row\" (click)=\"selectThisRecreation()\">\r\n  <div class=\"activity-desc\">\r\n    <h5>{{recreation.address}}</h5>\r\n    <p>{{recreation.main_decription}}</p>\r\n    <p>{{recreation.additional_decription}}</p>\r\n    <h6>{{recreation.phone}}</h6>\r\n  </div>\r\n  <div class=\"activity-img\">\r\n    <ul>\r\n      <li><img src='{{recreation.img1}}'  alt=\"\"/></li>\r\n      <li><img src='{{recreation.img2}}'  alt=\"\"/></li>\r\n    </ul>\r\n  </div>\r\n  <div class=\"clear\"> </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -448,7 +448,7 @@ module.exports = ""
 /***/ "./src/app/social-info/social-info.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"teddy-bear\">\n  <div class=\"teddy-text\">\n    <h4>{{title}}</h4>\n    <span class=\"w-line\"> </span>\n    <img src=\"{{img}}\" alt=\"\"  class=\"img-responsive\">\n  </div>\n  <div class=\"teddy-follow\">\n    <ul>\n      <li class=\"folw-h\"><h3>{{followers}}</h3>\n        <p>Followers</p>\n      </li>\n      <li><h3>{{following}}</h3>\n        <p>Following</p>\n      </li>\n    </ul>\n  </div>\n</div>\n"
+module.exports = "<div class=\"teddy-bear\">\r\n  <div class=\"teddy-text\">\r\n    <h4>{{title}}</h4>\r\n    <span class=\"w-line\"> </span>\r\n    <img src=\"{{img}}\" alt=\"\"  class=\"img-responsive\">\r\n  </div>\r\n  <div class=\"teddy-follow\">\r\n    <ul>\r\n      <li class=\"folw-h\"><h3>{{followers}}</h3>\r\n        <p>Followers</p>\r\n      </li>\r\n      <li><h3>{{following}}</h3>\r\n        <p>Following</p>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -528,7 +528,7 @@ module.exports = ""
 /***/ "./src/app/weather/weather.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"temperatur\">\n  <h5>{{additional_decription}}</h5>\n  <span class=\"w-line\"> </span>\n  <span class=\"cloud\"> </span>\n  <h2>{{temperature}}<sup class=\"degree\">°</sup></h2>\n  <h6>Water {{water}}<sup class=\"degree\">°</sup></h6>\n\n</div>\n"
+module.exports = "<div class=\"temperatur\">\r\n  <h5>{{additional_decription}}</h5>\r\n  <span class=\"w-line\"> </span>\r\n  <span class=\"cloud\"> </span>\r\n  <h2>{{temperature}}<sup class=\"degree\">°</sup></h2>\r\n  <h6>Water {{water}}<sup class=\"degree\">°</sup></h6>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
